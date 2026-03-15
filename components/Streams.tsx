@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { PlayCircle, Eye, Heart, Share2, Clock } from "lucide-react";
-import { streamGames, streams } from "../lib/data";
+import { streams } from "../lib/data";
 
 function classNames(...c: (string | false | undefined)[]) {
   return c.filter(Boolean).join(" ");
@@ -54,7 +54,8 @@ function StreamCard({ s }: { s: Stream }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
         <div className="absolute top-3 left-3 flex items-center gap-2 text-xs">
-          <span className="rounded-full bg-red-500 text-white px-2 py-0.5 font-semibold">
+<span className="rounded-full bg-red-500 text-white px-2 py-0.5 font-semibold animate-pulse flex items-center gap-1">
+            <span className="w-1.5 h-1.5 bg-white rounded-full animate-ping" />
             LIVE
           </span>
           <span className="rounded-full bg-black/60 px-2 py-0.5 text-white/80 border border-white/10 inline-flex items-center gap-1">
@@ -110,18 +111,21 @@ function StreamCard({ s }: { s: Stream }) {
 
 function FeaturedStream({ s }: { s: Stream }) {
   return (
-    <div className="rounded-3xl overflow-hidden border border-white/10 bg-white/5">
+    <div className="rounded-3xl overflow-hidden border border-white/10 bg-white/5 h-full">
+
       <div className="relative aspect-[16/8] overflow-hidden">
         <img
           src={s.cover}
           alt={s.title}
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+<div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent" />
         <div className="absolute top-4 left-4 flex items-center gap-2 text-xs">
-          <span className="rounded-full bg-red-500 text-white px-2 py-0.5 font-semibold">
+          <span className="rounded-full bg-red-500 text-white px-2 py-0.5 font-semibold animate-pulse flex items-center gap-1">
+            <span className="w-1.5 h-1.5 bg-white rounded-full animate-ping" />
             LIVE
           </span>
+
           <span className="rounded-full bg-black/60 px-2 py-0.5 text-white/80 border border-white/10 inline-flex items-center gap-1">
             <Eye className="w-3 h-3" />
             {Intl.NumberFormat().format(s.viewers)}
@@ -180,7 +184,7 @@ export default function StreamsSection() {
           </a>
         </div>
         <div className="mt-4 flex flex-wrap items-center gap-2">
-          {streamGames.map((g) => (
+          {["All", "Gaming", "Tech & Dev", "Music & Entertainment", "Lifestyle", "Fashion & Culture", "Just Chatting"].map((g) => (
             <button
               key={g}
               onClick={() => setFilter(g)}
@@ -195,8 +199,9 @@ export default function StreamsSection() {
             </button>
           ))}
         </div>
-        <div className="mt-6 grid lg:grid-cols-3 gap-4">
-          <div className="lg:col-span-2">
+<div className="mt-6 grid lg:grid-cols-2 gap-4 items-stretch min-h-[32rem]">
+
+          <div className="lg:row-span-2">
             <FeaturedStream s={featured} />
           </div>
           <div className="grid grid-cols-1 gap-4">
