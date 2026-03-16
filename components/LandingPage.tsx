@@ -14,9 +14,9 @@ import {
   UsersRound,
   Star,
 } from "lucide-react";
-import { tournaments, IMG, communities } from "../lib/data";
+import { tournaments, IMG, communities, sponsors, heroSlides } from "../lib/data";
 import LandingFeatures from "./LandingFeatures";
-import { Code, Camera, Sparkles, MessageCircle } from "lucide-react";
+import { Code, Camera, Sparkles, MessageCircle, Music } from "lucide-react";
 import { GradientIconCircle } from "./ui/GradientIconCircle";
 
 const tournamentGames = ["COD Mobile", "PUBG Mobile", "EA FC (FIFA)"];
@@ -38,7 +38,7 @@ export default function LandingPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [handle, setHandle] = useState("");
-  const [game, setGame] = useState(games[0]);
+  const [game, setGame] = useState(tournamentGames[0]);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<null | { ok: boolean; msg: string }>(
     null
@@ -101,7 +101,7 @@ export default function LandingPage() {
       setName("");
       setEmail("");
       setHandle("");
-      setGame(games[0]);
+      setGame(tournamentGames[0]);
     } catch (err) {
       setStatus({
         ok: false,
@@ -570,7 +570,7 @@ export default function LandingPage() {
                 onChange={(e) => setGame(e.target.value)}
                 className="mt-1 w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 outline-none focus:border-fuchsia-400"
               >
-                {games.map((g) => (
+                {tournamentGames.map((g) => (
                   <option key={g} value={g} className="bg-[#0b0b10]">
                     {g}
                   </option>
