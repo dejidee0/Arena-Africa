@@ -37,7 +37,7 @@ export default function DiscoverPage() {
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 py-24 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-medium mb-6">
-            <TrendingUp className="w-3 h-3" /> Discover Africa's Best Content
+            <TrendingUp className="w-3 h-3" /> Discover Africa&apos;s Best Content
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
             Find What Moves You
