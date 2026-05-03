@@ -14,13 +14,13 @@ type Gift = {
 };
 
 interface Props {
-  params: { creatorId: string };
+  params: Promise<{ creatorId: string }>;
 }
 
 export default function SendGiftPage({ params }: Props) {
+  const { creatorId } = React.use(params);
   const [selectedGift, setSelectedGift] = useState<Gift | null>(null);
   const [balance] = useState(4250);
-  const creatorId = params.creatorId;
 
   const creator = {
     handle: '@GhostAlpha',

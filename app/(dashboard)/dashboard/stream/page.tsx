@@ -1,7 +1,23 @@
 "use client";
 
 import React, { useState } from "react";
-import { Gamepad2, Users, Eye, Clock, Copy, RefreshCw, Play, Video, BarChart2, Calendar, Edit, Trash2, Gift } from "lucide-react";
+import {
+  Gamepad2,
+  Users,
+  Eye,
+  Clock,
+  Copy,
+  RefreshCw,
+  Play,
+  Video,
+  BarChart2,
+  Calendar,
+  Edit,
+  Trash2,
+  Gift,
+  ArrowBigRight,
+} from "lucide-react";
+import Link from "next/link";
 
 const stats = [
   { label: "Total Followers", value: "2,450" },
@@ -11,11 +27,46 @@ const stats = [
 ];
 
 const recentStreams = [
-  { date: "Today", title: "CODM Ranked Grind", duration: "4h 30m", peak: "245", earnings: "₦8,500", vod: true },
-  { date: "Yesterday", title: "PUBG Squads", duration: "3h 15m", peak: "189", earnings: "₦5,200", vod: true },
-  { date: "Feb 12", title: "Tournament Coverage", duration: "6h 00m", peak: "520", earnings: "₦12,000", vod: true },
-  { date: "Feb 11", title: "EA FC 1v1s", duration: "2h 45m", peak: "156", earnings: "₦3,800", vod: false },
-  { date: "Feb 10", title: "Free Fire Finals", duration: "5h 30m", peak: "380", earnings: "₦9,500", vod: true },
+  {
+    date: "Today",
+    title: "CODM Ranked Grind",
+    duration: "4h 30m",
+    peak: "245",
+    earnings: "₦8,500",
+    vod: true,
+  },
+  {
+    date: "Yesterday",
+    title: "PUBG Squads",
+    duration: "3h 15m",
+    peak: "189",
+    earnings: "₦5,200",
+    vod: true,
+  },
+  {
+    date: "Feb 12",
+    title: "Tournament Coverage",
+    duration: "6h 00m",
+    peak: "520",
+    earnings: "₦12,000",
+    vod: true,
+  },
+  {
+    date: "Feb 11",
+    title: "EA FC 1v1s",
+    duration: "2h 45m",
+    peak: "156",
+    earnings: "₦3,800",
+    vod: false,
+  },
+  {
+    date: "Feb 10",
+    title: "Free Fire Finals",
+    duration: "5h 30m",
+    peak: "380",
+    earnings: "₦9,500",
+    vod: true,
+  },
 ];
 
 const upcomingStreams = [
@@ -78,7 +129,10 @@ export default function StreamerDashboardPage() {
               <code className="flex-1 bg-[#1a1a24] border border-white/10 rounded-lg px-4 py-3 text-sm font-mono">
                 {showKey ? "gh0st_4lph4_sk_2024" : "••••••••••••••••••••"}
               </code>
-              <button onClick={() => setShowKey(!showKey)} className="p-3 rounded-lg bg-[#7C3AED]/20 text-[#7C3AED] hover:bg-[#7C3AED]/30">
+              <button
+                onClick={() => setShowKey(!showKey)}
+                className="p-3 rounded-lg bg-[#7C3AED]/20 text-[#7C3AED] hover:bg-[#7C3AED]/30"
+              >
                 <Eye className="w-5 h-5" />
               </button>
               <button className="p-3 rounded-lg bg-[#7C3AED]/20 text-[#7C3AED] hover:bg-[#7C3AED]/30">
@@ -95,7 +149,10 @@ export default function StreamerDashboardPage() {
       {/* Quick Stats */}
       <div className="grid grid-cols-4 gap-4">
         {stats.map((s, i) => (
-          <div key={i} className="bg-[#252535] rounded-xl border border-white/10 p-4 text-center">
+          <div
+            key={i}
+            className="bg-[#252535] rounded-xl border border-white/10 p-4 text-center"
+          >
             <div className="text-xl font-bold text-white">{s.value}</div>
             <div className="text-xs text-white/60">{s.label}</div>
           </div>
@@ -123,10 +180,14 @@ export default function StreamerDashboardPage() {
                 <td className="py-3 font-medium">{s.title}</td>
                 <td className="py-3 text-right text-sm">{s.duration}</td>
                 <td className="py-3 text-right text-sm">{s.peak}</td>
-                <td className="py-3 text-right text-green-400 font-medium">{s.earnings}</td>
+                <td className="py-3 text-right text-green-400 font-medium">
+                  {s.earnings}
+                </td>
                 <td className="py-3 text-right">
                   {s.vod ? (
-                    <button className="text-[#7C3AED] text-sm hover:underline">Watch</button>
+                    <button className="text-[#7C3AED] text-sm hover:underline">
+                      Watch
+                    </button>
                   ) : (
                     <span className="text-white/30 text-sm">—</span>
                   )}
@@ -142,7 +203,10 @@ export default function StreamerDashboardPage() {
         <h3 className="font-bold mb-4">Upcoming Scheduled Streams</h3>
         <div className="space-y-3">
           {upcomingStreams.map((s, i) => (
-            <div key={i} className="flex items-center justify-between p-4 bg-[#1a1a24] rounded-xl">
+            <div
+              key={i}
+              className="flex items-center justify-between p-4 bg-[#1a1a24] rounded-xl"
+            >
               <div>
                 <div className="font-medium">{s.title}</div>
                 <div className="text-sm text-white/60">{s.time}</div>
@@ -165,25 +229,65 @@ export default function StreamerDashboardPage() {
         <h3 className="font-bold mb-4">Recent Gifts</h3>
         <div className="space-y-3">
           {[
-            { emoji: '👸🏾', name: 'Kult Queen', from: '@VibeQueen', vc: 500000, time: '2 mins ago' },
-            { emoji: '🌍', name: 'Pan-Africa', from: '@GiftKing', vc: 100000, time: '15 mins ago' },
-            { emoji: '💎', name: 'Diamond Fang', from: '@NaijaLion', vc: 50000, time: '1 hour ago' },
-            { emoji: '⚡', name: 'Lagos Storm', from: '@TemiLover', vc: 25000, time: '2 hours ago' },
-            { emoji: '👑', name: 'Afro Crown', from: '@ZuluFan', vc: 10000, time: '3 hours ago' },
+            {
+              emoji: "👸🏾",
+              name: "Kult Queen",
+              from: "@VibeQueen",
+              vc: 500000,
+              time: "2 mins ago",
+            },
+            {
+              emoji: "🌍",
+              name: "Pan-Africa",
+              from: "@GiftKing",
+              vc: 100000,
+              time: "15 mins ago",
+            },
+            {
+              emoji: "💎",
+              name: "Diamond Fang",
+              from: "@NaijaLion",
+              vc: 50000,
+              time: "1 hour ago",
+            },
+            {
+              emoji: "⚡",
+              name: "Lagos Storm",
+              from: "@TemiLover",
+              vc: 25000,
+              time: "2 hours ago",
+            },
+            {
+              emoji: "👑",
+              name: "Afro Crown",
+              from: "@ZuluFan",
+              vc: 10000,
+              time: "3 hours ago",
+            },
           ].map((g, i) => (
-            <div key={i} className="flex items-center gap-3 p-3 bg-[#1a1a24] rounded-xl">
+            <div
+              key={i}
+              className="flex items-center gap-3 p-3 bg-[#1a1a24] rounded-xl"
+            >
               <span className="text-2xl">{g.emoji}</span>
               <div className="flex-1">
-                <div className="font-semibold">{g.name} ({g.vc.toLocaleString()} VC)</div>
-                <div className="text-white/60 text-sm">from {g.from} • {g.time}</div>
+                <div className="font-semibold">
+                  {g.name} ({g.vc.toLocaleString()} VC)
+                </div>
+                <div className="text-white/60 text-sm">
+                  from {g.from} • {g.time}
+                </div>
               </div>
             </div>
           ))}
         </div>
         <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-between text-sm text-white/60">
           <span>Total gifts today: 45 • 1,250,000 VC earned</span>
-          <Link href="/dashboard/gifts" className="text-[#7C3AED] hover:underline flex items-center gap-1">
-            View All <ArrowRight className="w-4 h-4" />
+          <Link
+            href="/dashboard/gifts"
+            className="text-[#7C3AED] hover:underline flex items-center gap-1"
+          >
+            View All <ArrowBigRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
@@ -191,7 +295,10 @@ export default function StreamerDashboardPage() {
       {/* Gift Earnings in main stats */}
       <div className="grid grid-cols-4 gap-4">
         {stats.map((s, i) => (
-          <div key={i} className="bg-[#252535] rounded-xl border border-white/10 p-4 text-center">
+          <div
+            key={i}
+            className="bg-[#252535] rounded-xl border border-white/10 p-4 text-center"
+          >
             <div className="text-xl font-bold text-white">{s.value}</div>
             <div className="text-xs text-white/60">{s.label}</div>
           </div>
@@ -205,7 +312,10 @@ export default function StreamerDashboardPage() {
       {/* Quick Links */}
       <div className="grid grid-cols-4 gap-4">
         {["My VODs", "Overlays", "Analytics", "Schedule"].map((link) => (
-          <button key={link} className="py-3 rounded-xl bg-[#252535] border border-white/10 text-white/70 hover:text-white hover:border-[#7C3AED]/50 transition-colors">
+          <button
+            key={link}
+            className="py-3 rounded-xl bg-[#252535] border border-white/10 text-white/70 hover:text-white hover:border-[#7C3AED]/50 transition-colors"
+          >
             {link}
           </button>
         ))}
