@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { PlayCircle, Eye, Heart, Share2, Clock } from "lucide-react";
+import Link from "next/link";
+import { PlayCircle, Eye, Heart, Share2, Clock, Gift } from "lucide-react";
 import { streams } from "../lib/data";
 
 function classNames(...c: (string | false | undefined)[]) {
@@ -89,6 +90,9 @@ function StreamCard({ s }: { s: Stream }) {
           <button className="rounded-lg border border-white/15 px-3 py-1 hover:bg-white/5">
             Watch
           </button>
+          <Link href={`/dashboard/gifts/send/${s.id}`} className="rounded-lg border border-[#F59E0B]/50 bg-[#F59E0B]/10 px-3 py-1 hover:bg-[#F59E0B]/20 text-[#F59E0B] inline-flex items-center gap-1">
+            <Gift className="w-3 h-3" /> Send Gift
+          </Link>
           <button className="rounded-lg border border-white/15 px-3 py-1 hover:bg-white/5 inline-flex items-center gap-1">
             <Heart className="w-3 h-3" /> Follow
           </button>

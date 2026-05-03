@@ -160,19 +160,45 @@ export default function StreamerDashboardPage() {
         </div>
       </div>
 
-      {/* Stream Tips */}
+      {/* Recent Gifts */}
       <div className="bg-[#252535] rounded-2xl border border-white/10 p-6">
-        <h3 className="font-bold mb-4">Tips Today</h3>
+        <h3 className="font-bold mb-4">Recent Gifts</h3>
         <div className="space-y-3">
-          {tips.map((t, i) => (
+          {[
+            { emoji: '👸🏾', name: 'Kult Queen', from: '@VibeQueen', vc: 500000, time: '2 mins ago' },
+            { emoji: '🌍', name: 'Pan-Africa', from: '@GiftKing', vc: 100000, time: '15 mins ago' },
+            { emoji: '💎', name: 'Diamond Fang', from: '@NaijaLion', vc: 50000, time: '1 hour ago' },
+            { emoji: '⚡', name: 'Lagos Storm', from: '@TemiLover', vc: 25000, time: '2 hours ago' },
+            { emoji: '👑', name: 'Afro Crown', from: '@ZuluFan', vc: 10000, time: '3 hours ago' },
+          ].map((g, i) => (
             <div key={i} className="flex items-center gap-3 p-3 bg-[#1a1a24] rounded-xl">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-green-500/20">
-                <Gift className="w-5 h-5 text-green-400" />
+              <span className="text-2xl">{g.emoji}</span>
+              <div className="flex-1">
+                <div className="font-semibold">{g.name} ({g.vc.toLocaleString()} VC)</div>
+                <div className="text-white/60 text-sm">from {g.from} • {g.time}</div>
               </div>
-              <span className="text-white/60">{t.user} tipped</span>
-              <span className="text-green-400 font-bold ml-auto">{t.amount}</span>
             </div>
           ))}
+        </div>
+        <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-between text-sm text-white/60">
+          <span>Total gifts today: 45 • 1,250,000 VC earned</span>
+          <Link href="/dashboard/gifts" className="text-[#7C3AED] hover:underline flex items-center gap-1">
+            View All <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+
+      {/* Gift Earnings in main stats */}
+      <div className="grid grid-cols-4 gap-4">
+        {stats.map((s, i) => (
+          <div key={i} className="bg-[#252535] rounded-xl border border-white/10 p-4 text-center">
+            <div className="text-xl font-bold text-white">{s.value}</div>
+            <div className="text-xs text-white/60">{s.label}</div>
+          </div>
+        ))}
+        <div className="bg-[#252535] rounded-xl border border-[#F59E0B]/30 p-4 text-center">
+          <div className="text-[#F59E0B] font-bold text-xl">₦350,000</div>
+          <div className="text-xs text-white/60">Gift Earnings</div>
         </div>
       </div>
 

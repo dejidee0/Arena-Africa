@@ -61,7 +61,7 @@ export default function PlayerProfilePage() {
             <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#7C3AED] to-[#EC4899]">
               <Gamepad2 className="h-5 w-5" />
             </span>
-            <span className="font-semibold">Arena Africa</span>
+            <span className="font-semibold">KultVibe</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/70">
             <Link href="/">Home</Link>
@@ -303,7 +303,7 @@ export default function PlayerProfilePage() {
       {/* Footer */}
       <footer className="py-10 border-t border-[#3D3D55]">
         <div className="mx-auto max-w-7xl px-4 text-center text-sm text-white/60">
-          © 2025 Arena Africa.
+          © 2025 KultVibe.
         </div>
       </footer>
     </div>

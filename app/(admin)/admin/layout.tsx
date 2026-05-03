@@ -29,7 +29,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             </div>
             <div>
               <p className="font-bold text-white text-sm">Platform Admin</p>
-              <p className="text-xs text-yellow-400">Arena Africa HQ</p>
+              <p className="text-xs text-yellow-400">KultVibe HQ</p>
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@ export default function Header() {
               <Gamepad2 className="w-6 h-6 text-white" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-              Arena Africa
+              KultVibe
             </span>
             <span className="ml-2 text-xs px-2 py-1 rounded-full bg-white/10 border border-white/20 text-white/80 font-medium">
               Beta

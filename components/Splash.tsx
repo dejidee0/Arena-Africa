@@ -35,7 +35,7 @@ export default function Splash({ onClose }: { onClose: () => void }) {
         !muted
       ) {
         const u = new SpeechSynthesisUtterance(
-          "Welcome to Arena Africa by CodewithMonk Technology"
+          "Welcome to KultVibe by CodewithMonk Technology"
         );
         u.rate = 0.9;
         u.pitch = 0.6;
@@ -135,8 +135,8 @@ export default function Splash({ onClose }: { onClose: () => void }) {
           <span>Welcome</span>
         </div>
         <h1 className="mt-4 text-4xl sm:text-5xl font-black leading-tight">
-          <span className="glitch" data-text="ARENA AFRICA">
-            ARENA AFRICA
+          <span className="glitch" data-text="KULTVIBE">
+            KULTVIBE
           </span>
         </h1>
         <p className="mt-2 text-sm sm:text-base text-white/70">

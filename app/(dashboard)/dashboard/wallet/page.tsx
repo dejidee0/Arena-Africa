@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import { DollarSign, TrendingUp, TrendingDown, ArrowUpRight, ArrowDownRight, Coins, CheckCircle } from "lucide-react";
 
 const transactions = [
-  { id: "1", date: "Today", type: "Win", desc: "CODM Lagos Cup - Semifinal", amount: "+₦15,000", status: "Confirmed", statusColor: "green" },
-  { id: "2", date: "Today", type: "Win", desc: "PUBG Naija Royale - Round 3", amount: "+₦20,000", status: "Confirmed", statusColor: "green" },
-  { id: "3", date: "Yesterday", type: "Entry Fee", desc: "EA FC Street League", amount: "-₦2,000", status: "Completed", statusColor: "orange" },
-  { id: "4", date: "Yesterday", type: "Withdrawal", desc: "Bank Transfer - GTB", amount: "-₦50,000", status: "Completed", statusColor: "blue" },
+  { id: "1", date: "Today", type: "Gift Earnings", desc: "Kult Queen from @VibeQueen", amount: "+₦175,000", status: "Confirmed", statusColor: "green" },
+  { id: "2", date: "Today", type: "Win", desc: "CODM Lagos Cup - Semifinal", amount: "+₦15,000", status: "Confirmed", statusColor: "green" },
+  { id: "3", date: "Yesterday", type: "Gift Earnings", desc: "Pan-Africa from @GiftKing", amount: "+₦35,000", status: "Confirmed", statusColor: "green" },
+  { id: "4", date: "Yesterday", type: "Entry Fee", desc: "EA FC Street League", amount: "-₦2,000", status: "Completed", statusColor: "orange" },
   { id: "5", date: "2 days ago", type: "Win", desc: "Free Fire Kano Open", amount: "+₦8,500", status: "Pending", statusColor: "yellow" },
   { id: "6", date: "3 days ago", type: "Tip", desc: "From @ZuluFan", amount: "+₦1,000", status: "Confirmed", statusColor: "purple" },
 ];
@@ -27,7 +27,7 @@ export default function WalletPage() {
   const [accountNumber, setAccountNumber] = useState("");
   const [amount, setAmount] = useState("");
 
-  const filters = ["All", "Winnings", "Withdrawals", "Entry Fees"];
+  const filters = ["All", "Winnings", "Withdrawals", "Entry Fees", "Gift Earnings"];
 
   return (
     <div className="space-y-6">
@@ -73,7 +73,11 @@ export default function WalletPage() {
           <div className="text-xs text-white/60">Total Withdrawn</div>
         </div>
         <div className="bg-[#252535] rounded-xl border border-white/10 p-4 text-center">
-          <div className="text-[#7C3AED] font-bold text-xl">₦45,000</div>
+        <div className="text-[#F59E0B] font-bold text-xl">4,250 VC</div>
+        <div className="text-xs text-white/60 mt-1">Vibe Credits • 1,000 VC = ₦350</div>
+        <button className="mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-[#7C3AED] to-[#EC4899] text-white text-sm font-medium">
+          Convert to Cash
+        </button>
           <div className="text-xs text-white/60">Active Value</div>
         </div>
       </div>

@@ -13,8 +13,9 @@ import {
   DollarSign,
   UsersRound,
   Star,
+  Music,
 } from "lucide-react";
-import { tournaments, IMG, communities } from "../lib/data";
+import { tournaments, IMG, communities, sponsors, games, heroSlides } from "../lib/data";
 import LandingFeatures from "./LandingFeatures";
 import { Code, Camera, Sparkles, MessageCircle } from "lucide-react";
 import { GradientIconCircle } from "./ui/GradientIconCircle";
@@ -38,7 +39,7 @@ export default function LandingPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [handle, setHandle] = useState("");
-  const [game, setGame] = useState(games[0]);
+const [game, setGame] = useState("COD Mobile");
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<null | { ok: boolean; msg: string }>(
     null
@@ -105,7 +106,7 @@ export default function LandingPage() {
     } catch (err) {
       setStatus({
         ok: false,
-        msg: "Could not submit. You can DM us on Instagram @ArenaAfrica.",
+        msg: "Could not submit. You can DM us on Instagram @KultVibe.",
       });
     } finally {
       setLoading(false);
@@ -413,10 +414,10 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* WHY ARENA AFRICA */}
+      {/* WHY KULTVIBE */}
       <section className="py-24 bg-[#0a0a0f]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-extrabold mb-8">Why Arena Africa?</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-8">Why KultVibe?</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="relative rounded-2xl overflow-hidden h-[400px] group">
               <img src="/kadyn-pierce-PruhDU1m1Yk-unsplash.jpg" alt="Built for Africa" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -448,7 +449,7 @@ export default function LandingPage() {
                   <Star className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Creator Economy</h3>
-                <p className="text-white/70">Go from bedroom streamer to brand ambassador. Arena Africa&apos;s Creator tier connects you directly with MTN, Red Bull, and more</p>
+                <p className="text-white/70">Go from bedroom streamer to brand ambassador. KultVibe&apos;s Creator tier connects you directly with MTN, Red Bull, and more</p>
               </div>
             </div>
           </div>
@@ -570,7 +571,7 @@ export default function LandingPage() {
                 onChange={(e) => setGame(e.target.value)}
                 className="mt-1 w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 outline-none focus:border-fuchsia-400"
               >
-                {games.map((g) => (
+{["COD Mobile", "PUBG Mobile", "EA FC (FIFA)"].map((g) => (
                   <option key={g} value={g} className="bg-[#0b0b10]">
                     {g}
                   </option>
@@ -631,7 +632,7 @@ export default function LandingPage() {
                 <Gamepad2 className="h-5 w-5" />
               </span>
               <span className="text-sm text-white/70">
-                © 2025 Arena Africa. Built for the continent.
+                © 2025 KultVibe. Built for the continent.
               </span>
             </div>
             <div className="flex items-center gap-5 text-sm text-white/60">

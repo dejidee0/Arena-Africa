@@ -128,7 +128,7 @@ const discussions = [
     handle: '@TemiStreams',
     community: 'Lagos Gaming Hub',
     communityColor: 'bg-purple-500/20 text-purple-400',
-    title: 'Anyone want to squad up for the Arena Africa CODM Cup? Looking for 2 more',
+    title: 'Anyone want to squad up for the KultVibe CODM Cup? Looking for 2 more',
     time: '3 hrs ago',
     replies: 19,
     upvotes: 54,

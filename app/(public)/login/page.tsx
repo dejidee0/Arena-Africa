@@ -35,7 +35,7 @@ export default function LoginPage() {
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#7C3AED] to-[#EC4899] shadow-lg shadow-purple-500/30 mb-3">
               <Gamepad2 className="h-7 w-7 text-white" />
             </div>
-            <span className="text-xl font-bold tracking-wide">Arena Africa</span>
+            <span className="text-xl font-bold tracking-wide">KultVibe</span>
           </div>
 
           {/* Headline */}

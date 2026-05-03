@@ -22,7 +22,7 @@ export default function CreatorsPage() {
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#7C3AED] to-[#EC4899]">
                 <Gamepad2 className="h-5 w-5" />
               </span>
-              <span className="font-semibold tracking-wide">Arena Africa</span>
+              <span className="font-semibold tracking-wide">KultVibe</span>
             </Link>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/70">
@@ -44,7 +44,7 @@ export default function CreatorsPage() {
       {/* Page header */}
       <div className="border-b border-white/10 py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-3">Arena Africa Creators</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-3">KultVibe Creators</h1>
           <p className="text-white/60 text-lg">Follow the voices of African gaming</p>
         </div>
       </div>
@@ -137,7 +137,7 @@ export default function CreatorsPage() {
                 <Gamepad2 className="h-5 w-5" />
               </span>
               <span className="text-sm text-white/70">
-                © 2025 Arena Africa. Built for the continent.
+                © 2025 KultVibe. Built for the continent.
               </span>
             </div>
             <div className="flex items-center gap-5 text-sm text-white/60">

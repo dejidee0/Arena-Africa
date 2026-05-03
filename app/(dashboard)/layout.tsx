@@ -7,6 +7,8 @@ import {
   Gamepad2,
   LayoutDashboard,
   Trophy,
+  Gift,
+
   Swords,
   TrendingUp,
   Award,
@@ -51,7 +53,8 @@ const menuItems = [
   ]},
   { section: "ACCOUNT", items: [
     { label: "Wallet", href: "/dashboard/wallet", icon: Wallet },
-    { label: "Arena Coins", href: "/dashboard/coins", icon: Coins },
+    { label: "Vibe Credits", href: "/dashboard/coins", icon: Coins },
+    { label: "🎁 Gifts", href: "/dashboard/gifts", icon: Gift },
     { label: "Notifications", href: "/dashboard/notifications", icon: Bell },
     { label: "Settings", href: "/dashboard/settings", icon: Settings },
   ]},
@@ -88,7 +91,7 @@ export default function DashboardLayout({
               <div className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#7C3AED] to-[#EC4899]">
                 <Gamepad2 className="h-5 w-5" />
               </div>
-              <span className="font-semibold">Arena Africa</span>
+              <span className="font-semibold">KultVibe</span>
             </Link>
           </div>
 

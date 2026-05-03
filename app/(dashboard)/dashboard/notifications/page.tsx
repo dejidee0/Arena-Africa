@@ -17,8 +17,8 @@ const notifications = [
   { id: 11, type: "match", title: "Dispute resolved in your favour vs @Shadow", icon: Shield, iconBg: "bg-green-500/20", iconColor: "text-green-400", time: "3 days ago", unread: false },
   { id: 12, type: "social", title: "@NaijaPro is now following you", icon: User, iconBg: "bg-purple-500/20", iconColor: "text-purple-400", time: "3 days ago", unread: false },
   { id: 13, type: "tournament", title: "Free Fire Kano Open starts tomorrow", icon: Trophy, iconBg: "bg-yellow-500/20", iconColor: "text-yellow-400", time: "4 days ago", unread: false },
-  { id: 14, type: "payment", title: "Arena Coins purchase confirmed: 1,500 AC", icon: Wallet, iconBg: "bg-yellow-500/20", iconColor: "text-yellow-400", time: "4 days ago", unread: false },
-  { id: 15, type: "system", title: "Welcome to Arena Africa! Complete your profile", icon: Zap, iconBg: "bg-purple-500/20", iconColor: "text-purple-400", time: "1 week ago", unread: false },
+  { id: 14, type: "payment", title: "Vibe Credits purchase confirmed: 1,500 VC", icon: Wallet, iconBg: "bg-yellow-500/20", iconColor: "text-yellow-400", time: "4 days ago", unread: false },
+  { id: 15, type: "system", title: "Welcome to KultVibe! Complete your profile", icon: Zap, iconBg: "bg-purple-500/20", iconColor: "text-purple-400", time: "1 week ago", unread: false },
 ];
 
 const filters = ["All", "Matches", "Tournaments", "Payments", "Social", "System"];

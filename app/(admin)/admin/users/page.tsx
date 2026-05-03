@@ -72,7 +72,7 @@ export default function AdminUsersPage() {
             <SlidersHorizontal className="w-3.5 h-3.5" /> Admin Users
           </div>
           <h1 className="text-3xl md:text-4xl font-bold mt-3">User Management</h1>
-          <p className="text-white/60 mt-2 max-w-2xl">Audit, filter, and export user data across Arena Africa.</p>
+          <p className="text-white/60 mt-2 max-w-2xl">Audit, filter, and export user data across KultVibe.</p>
         </div>
       </div>
 

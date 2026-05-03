@@ -89,7 +89,7 @@ export default function TournamentsPage() {
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#7C3AED] to-[#EC4899]">
                 <Gamepad2 className="h-5 w-5" />
               </span>
-              <span className="font-semibold tracking-wide">Arena Africa</span>
+              <span className="font-semibold tracking-wide">KultVibe</span>
             </Link>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/70">
@@ -262,7 +262,7 @@ export default function TournamentsPage() {
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#7C3AED] to-[#EC4899]">
                 <Gamepad2 className="h-5 w-5" />
               </span>
-              <span className="text-sm text-white/70">© 2025 Arena Africa.</span>
+              <span className="text-sm text-white/70">© 2025 KultVibe.</span>
             </div>
             <div className="flex items-center gap-5 text-sm text-white/60">
               <a href="#" className="hover:text-white">Discord</a>

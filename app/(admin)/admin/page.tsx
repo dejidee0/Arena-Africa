@@ -27,7 +27,7 @@ const revenueData = [
 ]
 
 const activityFeed = [
-  { icon: UserPlus, color: 'text-green-400', bg: 'bg-green-500/10', text: '@NaijaCTF joined Arena Africa', time: '2min ago' },
+  { icon: UserPlus, color: 'text-green-400', bg: 'bg-green-500/10', text: '@NaijaCTF joined KultVibe', time: '2min ago' },
   { icon: Trophy, color: 'text-yellow-400', bg: 'bg-yellow-500/10', text: 'CODM Lagos Cup tournament started', time: '15min ago' },
   { icon: DollarSign, color: 'text-green-400', bg: 'bg-green-500/10', amount: '₦45,000', text: 'payout processed to @GhostAlpha', time: '32min ago' },
   { icon: AlertCircle, color: 'text-red-400', bg: 'bg-red-500/10', text: 'Dispute raised: @Ama vs @Shadow', time: '1h ago' },
@@ -84,7 +84,7 @@ export default function AdminDashboardPage() {
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
                   <Shield className="w-4 h-4 text-white" />
                 </div>
-                <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400">Arena Africa HQ</span>
+                <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400">KultVibe HQ</span>
               </div>
               <h1 className="text-3xl font-bold text-white">Platform Admin</h1>
               <p className="text-white/50 text-sm mt-1">Sunday, March 15, 2026 — Full overview</p>

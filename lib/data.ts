@@ -119,7 +119,7 @@ export const brandDeals = [
   { id: "b3", brand: "Red Bull", brandInitial: "R", title: "Energy & Esports", amount: "₦400,000", requirements: "Tournament coverage", status: "available" },
   { id: "b4", brand: "Airtel", brandInitial: "A", title: "Data Bundle Promo", amount: "₦250,000", requirements: "Nigerian audience", status: "available" },
   { id: "b5", brand: "Logitech", brandInitial: "L", title: "Gaming Gear Review", amount: "₦180,000", requirements: "Tech content creator", status: "available" },
-  { id: "b6", brand: "Arena Africa", brandInitial: "A", title: "Platform Ambassador", amount: "₦600,000", requirements: "Top Creator badge", status: "available" },
+  { id: "b6", brand: "KultVibe", brandInitial: "K", title: "Platform Ambassador", amount: "₦600,000", requirements: "Top Creator badge", status: "available" },
 ];
 
 export const activeBrandDeals = [
@@ -144,5 +144,24 @@ export const competitions = [
   { name: "Afrobeats Beat Battle", category: "Music", prize: "₦80,000", spots: "18/32 artists", image: "/dj.jpg" },
   { name: "African UI Design Challenge", category: "Design", prize: "₦60,000", spots: "34/64", image: "/setup2.jpg" },
   { name: "PUBG Naija Royale", category: "Gaming", prize: "₦250,000", spots: "32/100", image: "/fausto-sandoval-Cc-KUNmV1UE-unsplash.jpg" },
+];
+
+export const vcPackages = [
+  { id: 1, vc: 1000, price: 500, popular: false },
+  { id: 2, vc: 5000, price: 2000, popular: true },
+  { id: 3, vc: 15000, price: 5000, popular: false },
+  { id: 4, vc: 50000, price: 15000, popular: false },
+  { id: 5, vc: 200000, price: 50000, popular: false },
+];
+
+export const giftCatalogue = [
+  { id: 1, name: "Drum Drop", emoji: "🥁", vc: 500, naira: 175, creatorNaira: 175, special: false },
+  { id: 2, name: "Jollof Flame", emoji: "🔥", vc: 1500, naira: 525, creatorNaira: 525, special: false },
+  { id: 3, name: "Naija Lion", emoji: "🦁", vc: 5000, naira: 1750, creatorNaira: 1750, special: false },
+  { id: 4, name: "Afro Crown", emoji: "👑", vc: 10000, naira: 3500, creatorNaira: 3500, special: false },
+  { id: 5, name: "Lagos Storm", emoji: "⚡", vc: 25000, naira: 8750, creatorNaira: 8750, special: false },
+  { id: 6, name: "Diamond Fang", emoji: "💎", vc: 50000, naira: 17500, creatorNaira: 17500, special: false },
+  { id: 7, name: "Pan-Africa", emoji: "🌍", vc: 100000, naira: 35000, creatorNaira: 35000, special: false },
+  { id: 8, name: "Kult Queen", emoji: "👸🏾", vc: 500000, naira: 175000, creatorNaira: 175000, special: true },
 ];
 

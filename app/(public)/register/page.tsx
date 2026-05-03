@@ -51,11 +51,11 @@ export default function RegisterPage() {
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#7C3AED] to-[#EC4899] shadow-lg shadow-purple-500/30 mb-3">
               <Gamepad2 className="h-7 w-7 text-white" />
             </div>
-            <span className="text-xl font-bold tracking-wide">Arena Africa</span>
+            <span className="text-xl font-bold tracking-wide">KultVibe</span>
           </div>
 
           {/* Headline */}
-          <h1 className="text-2xl font-bold text-center mb-6">Join The Arena</h1>
+          <h1 className="text-2xl font-bold text-center mb-6">Join The Vibe</h1>
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-3">
